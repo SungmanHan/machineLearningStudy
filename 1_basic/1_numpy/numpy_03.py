@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# 가장 중요한 내용
 import numpy as np
 
 # 파이썬 리스트 생성
