@@ -8,7 +8,6 @@ numpy_array_1 = np.array(python_list)
 print(f"numpy_array_1.shape -> {numpy_array_1.shape}")
 print(f"numpy_array_1 -> {numpy_array_1}")
 
-# 전치 : 인덱스의 값을 뒤바꿔주는 것
 # 배열의 전치 연산을 수행할 수 있는 np.transpose 함수
 # 1차원인 배열의 경우 변함이 없음
 numpy_array_2 = np.transpose(numpy_array_1)
@@ -34,9 +33,6 @@ numpy_array_4 = numpy_array_1_reshape.reshape(-1)
 print(f"numpy_array_4.shape -> {numpy_array_4.shape}")
 print(f"numpy_array_4 -> {numpy_array_4}")
 
-numpy_array_5 = numpy_array_1_reshape.T
-print(f"numpy_array_5.shape -> {numpy_array_5.shape}")
-print(f"numpy_array_5 -> {numpy_array_5}")
 
 
 
