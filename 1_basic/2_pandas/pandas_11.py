@@ -15,4 +15,7 @@ s2 = pd.Series([2, 3, 4], index=['A', 'B', 'C'])
 
 print(s2)
 
-print(pd.concat([s1, s2]))
+s3 = pd.concat([s1, s2])
+
+print(s3)
+

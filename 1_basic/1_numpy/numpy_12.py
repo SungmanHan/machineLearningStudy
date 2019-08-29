@@ -9,9 +9,13 @@ numpy_array_2 = np.array([4, 5, 6])
 r = np.r_[numpy_array_1, numpy_array_2]
 print(r)
 
+
+numpy_array_1 = np.array([1, 2, 3])
+numpy_array_2 = np.array([4, 5, 6])
+
 # numpy 배열을 왼쪽에서 오른쪽으로 결합
-r = np.hstack([numpy_array_1, numpy_array_2])
-print(r)
+r2 = np.hstack([numpy_array_1, numpy_array_2])
+print(r2)
 
 array_1_reshape = numpy_array_1.reshape(-1,1)
 array_2_reshape = numpy_array_2.reshape(-1,1)

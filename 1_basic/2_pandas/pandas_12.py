@@ -25,7 +25,9 @@ df2 = pd.DataFrame(
 
 print(df2)
 
-print(pd.concat([df1, df2], axis=1))
+df3 = pd.concat([df1, df2], axis=1)
+
+print(df3)
 
 
 

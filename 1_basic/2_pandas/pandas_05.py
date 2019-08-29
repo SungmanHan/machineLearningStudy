@@ -24,6 +24,9 @@ print(df.info())
 # (수치데이터에 대한 정보만 출력)
 print(df.describe())
 
+# std : 표준편차
+# 사분위수는 이상치 데이터를 확인 또는 검증 지표
+
 # 각각의 열에 대해서 통계 메소드를 제공
 print(df['year'].sum())
 print(df['year'].mean())
@@ -31,7 +34,7 @@ print(df['year'].max())
 print(df['year'].min())
 
 print("=" * 17)
-# 특정 열에 저장된 데이터의 개수를 반환
+# 특정 열에 저장된 데이터의 개수를 반환 중복제거
 # (각각의 데이터 개수를 반환)
 print(df.GDP.value_counts())
 
@@ -46,6 +49,10 @@ from sklearn.datasets import load_breast_cancer
 _, y = load_breast_cancer(return_X_y=True)
 
 label = pd.Series(y)
+
+print((label.value_counts() / len(label)) * 100)
+
+# 정밀도, 재현율 > 정확도
 
 
 
