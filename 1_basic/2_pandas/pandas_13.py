@@ -34,8 +34,14 @@ df['GDP rate'].plot()
 plt.show()
 
 
+from sklearn.datasets import load_iris
 
+iris = load_iris()
 
+x = pd.DataFrame(iris.data)
+
+x.hist()
+plt.show()
 
 
 

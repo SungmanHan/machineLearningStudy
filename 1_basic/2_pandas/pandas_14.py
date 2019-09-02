@@ -16,6 +16,8 @@ fname = '../../data/iris.csv'
 # - 두 번째 라인부터 데이터로 취급함
 df_iris = pd.read_csv(fname)
 
+df_iris.info()
+
 # iris 데이터의 일부분을 확인
 print(df_iris.head(2))
 print(df_iris.tail(3))
@@ -45,7 +47,11 @@ y_df = df_iris.iloc[:, -1]
 
 # 라벨 데이터의 분포를 확인
 print(type(y_df))
+print(type(X_df))
+
+# 중복을 제거한 후 카운터
 print(y_df.value_counts())
+# 각가의 라벨데이터의 분포 확인
 print(y_df.value_counts() / len(y_df))
 
 # 특정 데이터의 분포를 확인

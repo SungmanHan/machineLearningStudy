@@ -39,6 +39,7 @@ print(y.value_counts())
 # 값의 기본 통계를 확인할 수 있음
 print(y.describe())
 
+y.hist()
 
 
 

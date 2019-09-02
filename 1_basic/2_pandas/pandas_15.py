@@ -4,8 +4,11 @@ import pandas as pd
 
 # 사이킷 런의 sklearn.datasets 패키지 내부의
 # 학습 데이터를 로딩하는 코드
-# (load_... 이름으로 함수가 정의되어 있음)
+# (load_... 이름으로 함수가 정의되어 있음, 머신러닝 검증용 데이터)
 from sklearn.datasets import load_iris
+
+# fetch_ 의 경우 실제 데이터 set으로 10만개 이상의 데이터를 갖고 있다.
+# from sklearn.datasets import fetch_
 
 # iris 데이터를 로딩하는 코드
 iris_data = load_iris()
@@ -28,10 +31,11 @@ print(type(iris_data.data))
 # pandas 데이터 프레임으로 
 # 특성 데이터를 저장
 X_df = pd.DataFrame(iris_data.data)
-
+print(type(X_df))
 # Bunch 클래스의 타입의 feature_names 키 값을
 # 사용하여 데이터프레임의 헤더를 설정
 X_df.columns = iris_data.feature_names
+print(X_df)
 
 # iris 데이터의 샘플 개수 및 결측데이터 확인
 print(X_df.info())
@@ -42,19 +46,26 @@ print(X_df.describe())
 # 라벨 데이터의 데이터프레임 생성
 # 키 값 'target' 은 라벨 데이터를 반환
 # (numpy 1차원 배열의 형태)
-y_df = pd.DataFrame(iris_data.target)
-
+# y_df = pd.DataFrame(iris_data.target)
+y_df = pd.Series(iris_data.target)
 # 데이터의 확인
 # 사이킷 런에서 제공되는 데이터들은
 # 전처리가 완료된 상태의 데이터이므로
 # 문자열이 아닌 수치 데이터가 제공됨
 print(y_df)
-
+print(type(y_df))
 # 라벨 데이터의 분포 확인
-print(y_df[0].value_counts())
-print(y_df[0].value_counts() / len(y_df))
+#print(y_df[0].value_counts())
+#print(y_df[0].value_counts() / len(y_df))
+print(y_df.value_counts())
+print(y_df.value_counts() / len(y_df))
+
+# 데이터는 크게 두 가지로 나눈다
+# 1) 분류형 데이터 셋
+# 2) 회기분석용 데이터 셋
 
 # 특성 데이터와 라벨 데이터의 결합
+# 묶이는 기준은 index값으로
 all_df = pd.concat([X_df, y_df], axis=1)
 
 # pandas 옵션을 사용하여 화면에 출력할
