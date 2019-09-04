@@ -33,15 +33,18 @@ plt.show()
 df['GDP rate'].plot()
 plt.show()
 
-
+# iris 데이터 셋을 제공하는 load_iris 함수
 from sklearn.datasets import load_iris
-
 iris = load_iris()
 
-x = pd.DataFrame(iris.data)
+X = pd.DataFrame(iris.data)
 
-x.hist()
+X.hist()
 plt.show()
+
+
+
+
 
 
 

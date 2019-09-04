@@ -25,15 +25,10 @@ df2 = pd.DataFrame(
 
 print(df2)
 
-# 결측 데이터를 확인할 수 있음, 수평으로 데이터를 묶어야 함
-df3 = pd.concat([df1, df2])
+print(pd.concat([df1, df2]))
+print(pd.concat([df1, df2], axis=1))
 
-print(df3)
 
-# 수평으로 데이터를 연결하는 경우 axis=1로 인수를 설정
-df3 = pd.concat([df1, df2], axis=1)
-
-print(df3)
 
 
 
