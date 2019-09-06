@@ -16,8 +16,9 @@ from sklearn.linear_model import LinearRegression, Ridge
 
 lr_model = LinearRegression().fit(X_train, y_train)
 
-alpha=1.7
-ridge_model = Ridge(alpha=alpha).fit(X_train, y_train)
+alpha=10.7
+ridge_model = Ridge(
+        alpha=alpha, random_state=1).fit(X_train, y_train)
 
 print('LR 학습 결과 : ', lr_model.score(X_train, y_train))
 print('Ridge 학습 결과 : ', ridge_model.score(X_train, y_train))

@@ -25,7 +25,7 @@ from sklearn.linear_model import LinearRegression, Ridge
 
 lr_model = LinearRegression().fit(X_train, y_train)
 
-alpha=0.3
+alpha=0.5
 ridge_model = Ridge(alpha=alpha).fit(X_train, y_train)
 
 # 선형 모델의 경우 데이터의 특성의 개수가 많아질수록
